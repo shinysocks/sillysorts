@@ -28,3 +28,25 @@ if the arrays are the same, this process is repeated until the list happens to b
 similar to "if enough moneys are typing for long enough they'll eventually spit
 out the entire works of shakespeare", if enough lists are made for long enough,
 eventually it'll spit out the sorted list
+
+
+FlipSort:
+
+
+IntelligentDesignSort:
+    Time Complexity O(1)
+this algorithm will only accept lists that are already sorted, if sorted,
+it return the list given, otherwise it will show an error message
+
+
+StalinSort:
+    Time Complexity O(n)
+this algorithm will go through the list and delete any numbers that are smaller than the
+number before it, therefore creating a new, sorted, list
+
+
+BlackBeardSort:
+    Time Complexity O(1)
+this algorithm deletes the entire list except for one number at random, keeping it
+alive to "Tell the tale"
+
