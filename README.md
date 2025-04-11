@@ -3,20 +3,14 @@
 ---
 ### Usage
 >Run java implementations:
-```
-make java
-
-```
->or
-```
-gradle run
-
-```
-
+>```
+>make java
+>```
+>
 >Run c++ implementations:
-```
-make cpp
-```
+>```
+>make cpp
+>```
 
 ---
 ### BogoSort
