@@ -1,0 +1,70 @@
+plugins {
+    id 'java'
+    id 'eclipse'
+    id 'application'
+    id 'java-library'
+}
+
+ext {
+    projectName = 'sillysorts'
+}
+
+
+eclipse {
+    project {
+        name = "$projectName"
+    }
+
+    classpath {
+        defaultOutputDir = file("${project.projectDir}/build/eclipse")
+        file {
+            whenMerged {
+                cp -> cp.getEntries().forEach{
+                    cpEntry -> if(cpEntry.kind=='src') {
+                        cpEntry.output = cpEntry.output.replace('bin/', 'build/eclipse/')
+                    }
+                }
+            }
+        }
+    }
+}
+
+application {
+    mainClass = "Driver"
+}
+
+repositories {
+    mavenCentral()
+    gradlePluginPortal()
+}
+
+version = '1.0.0'
+java.sourceCompatibility = "22"
+
+run {
+    standardInput = System.in
+}
+
+/** 
+ * :uberjar - packages JavaFX programs [needs Main.java entrypoint]
+ */
+task uberjar(type: Jar) {
+    manifest {
+        attributes 'Main-Class': 'Driver'
+    }
+    archiveBaseName = "$projectName"
+    archiveClassifier = ""
+    archiveVersion = ""
+    duplicatesStrategy = DuplicatesStrategy.EXCLUDE
+    from { configurations.runtimeClasspath.collect { it.isDirectory() ? it : zipTree(it) } }
+    with jar
+}
+
+sourceSets {
+    main {
+        java {
+            srcDirs = ['src/java']
+        }
+    }
+}
+

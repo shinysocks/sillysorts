@@ -1,11 +1,6 @@
-package FunnySorts;
-
 import java.util.Arrays;
 
-
 public class StalinSort {
-
-
     public static void stalinSort(int[] list) {
         int[] result = new int[list.length];
         int index = 0;

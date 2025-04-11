@@ -1,10 +1,7 @@
-package FunnySorts;
-
-import java.util.*;
+import java.util.Arrays;
+import java.util.Random;
 
 public class BogoSort {
-
-
     public static void bogoSort(int[] list) {
         int[] array = Arrays.copyOf(list, list.length);
         Random rnd = new Random();

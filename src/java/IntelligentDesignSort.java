@@ -1,11 +1,6 @@
-package FunnySorts;
-
-
 import java.util.Arrays;
 
 public class IntelligentDesignSort {
-
-
     public static void intelligentDesignSort(int[] list){
         int[] array = Arrays.copyOf(list, list.length);
         if (!isSorted(array,0)){

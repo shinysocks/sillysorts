@@ -1,8 +1,5 @@
-package FunnySorts;
-
 import java.util.Arrays;
 import java.util.Random;
-
 
 public class BogobogoSort {
     private static final Random random = new Random();
