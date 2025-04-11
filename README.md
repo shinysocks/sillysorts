@@ -1,5 +1,22 @@
 ## **sillysorts**
->todo: setup build.gradle and makefile with tasks for each sort
+
+---
+### Usage
+>Run java implementations:
+```
+make java
+
+```
+>or
+```
+gradle run
+
+```
+
+>Run c++ implementations:
+```
+make cpp
+```
 
 ---
 ### BogoSort
